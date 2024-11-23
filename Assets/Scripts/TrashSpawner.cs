@@ -1,47 +1,40 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class TrashSpawner : MonoBehaviour
 {
-    public GameObject[] trashPrefabs;  // Array untuk berbagai jenis sampah
-    public float spawnInterval = 2f;   // Interval spawn (detik)
-    public Transform spawnPoint;       // Titik posisi spawn yang sudah Anda tentukan
-    private bool canSpawn = true;      // Status apakah bisa spawn
+    public GameObject[] trashPrefabs; // Array prefab sampah
+    public Transform spawnPoint;      // Titik awal spawn
+    public float spawnInterval = 2f;  // Interval spawn
+    private bool isSpawning = true;   // Status apakah sedang spawn
 
     void Start()
     {
-        // Mulai Coroutine untuk spawn sampah dengan interval
-        StartCoroutine(SpawnTrashWithDelay());
+        // Mulai coroutine untuk spawn sampah
+        StartCoroutine(SpawnTrash());
     }
 
-    // Coroutine untuk spawn sampah setiap interval tertentu
-    private IEnumerator SpawnTrashWithDelay()
+    IEnumerator SpawnTrash()
     {
-        while (true)  // Loop tak terbatas
+        while (isSpawning)
         {
-            if (canSpawn)
-            {
-                // Pilih secara acak prefab sampah dari array
-                GameObject trashToSpawn = trashPrefabs[Random.Range(0, trashPrefabs.Length)];
-
-                // Tentukan posisi spawn sesuai dengan posisi spawnPoint yang sudah Anda tentukan
-                Vector3 spawnPosition = spawnPoint.position;
-
-                // Spawn sampah pada posisi yang diinginkan
-                Instantiate(trashToSpawn, spawnPosition, Quaternion.identity);
-
-                // Set canSpawn ke false agar tidak spawn lebih cepat
-                canSpawn = false;
-
-                // Tunggu selama spawnInterval detik sebelum spawn lagi
-                yield return new WaitForSeconds(spawnInterval);
-
-                // Setelah interval selesai, izinkan spawn lagi
-                canSpawn = true;
-            }
-
-            // Menunggu sebelum spawn lagi
-            yield return null;
+            // Spawn sampah baru
+            Spawn();
+            yield return new WaitForSeconds(spawnInterval);
         }
+    }
+
+    void Spawn()
+    {
+        // Pilih sampah acak dari array
+        int index = Random.Range(0, trashPrefabs.Length);
+        Instantiate(trashPrefabs[index], spawnPoint.position, Quaternion.identity);
+    }
+
+    public void StopSpawning()
+    {
+        // Hentikan proses spawn
+        isSpawning = false;
     }
 }

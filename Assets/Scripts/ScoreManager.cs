@@ -5,19 +5,47 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public int score = 0; // Variabel untuk menyimpan score
-    public Text scoreText; // UI Text untuk menampilkan score
+    public Text scoreText;  // UI teks untuk skor
+    public Text timerText;  // UI teks untuk timer
+    private int score = 0;  // Nilai skor
+    private float gameTime = 120f; // Waktu permainan dalam detik (2 menit)
+    private bool isGameOver = false;
 
-    // Fungsi untuk menambah skor
-    public void AddScore(int points)
+    void Update()
     {
-        score += points; // Menambah score
-        UpdateScoreUI(); // Memperbarui tampilan UI
+        if (!isGameOver)
+        {
+            // Kurangi waktu setiap frame
+            gameTime -= Time.deltaTime;
+
+            // Perbarui UI Timer
+            timerText.text = "Time: " + Mathf.Ceil(gameTime).ToString();
+
+            // Akhiri permainan jika waktu habis
+            if (gameTime <= 0f)
+            {
+                isGameOver = true;
+                gameTime = 0f; // Pastikan waktu tidak negatif
+                Debug.Log("Game Over!");
+                EndGame();
+            }
+        }
     }
 
-    // Fungsi untuk memperbarui tampilan score
-    private void UpdateScoreUI()
+    public void UpdateScore(int points)
     {
-        scoreText.text = "Score: " + score.ToString(); // Menampilkan score di UI
+        if (!isGameOver)
+        {
+            // Tambahkan atau kurangi skor
+            score += points;
+            scoreText.text = "Score: " + score.ToString();
+        }
+    }
+
+    private void EndGame()
+    {
+        // Logika ketika permainan selesai
+        Debug.Log("Final Score: " + score);
+        // Tambahkan logika lain, seperti menampilkan layar akhir permainan
     }
 }

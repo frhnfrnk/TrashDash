@@ -1,32 +1,116 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TrashCan : MonoBehaviour
 {
-    public ScoreManager scoreManager;  // Referensi ke ScoreManager
-    private bool isColliding = false;  // Untuk mengecek apakah objek berada dalam trigger
+    public ScoreManager scoreManager;          // Referensi ke ScoreManager
+    public GameObject feedbackTextPrefab;      // Prefab untuk teks feedback
+    public Transform canvasTransform;          // Transform Canvas tempat teks ditampilkan
+    public CameraShake cameraShake;            // Referensi ke CameraShake
+    public AudioClip correctSound;             // Suara untuk jawaban benar
+    public AudioClip wrongSound;               // Suara untuk jawaban salah
+    private AudioSource audioSource;           // AudioSource untuk memutar efek suara
+
+    void Start()
+    {
+        // Ambil komponen AudioSource
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource is missing on " + gameObject.name);
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     {
-        // Mengecek jika objek yang masuk adalah sampah dan berada dalam trigger
         if (other.CompareTag("Trash"))
         {
-            // Cek tag dari tong sampah
+            string message = "";                // Pesan yang akan ditampilkan
+            int points = 0;                     // Poin yang akan diupdate
+            string trashType = other.gameObject.name;
+
+            // Cek jenis sampah dan tong sampah
             if (gameObject.CompareTag("Yellow"))
             {
-                // Jika sampah masuk ke tong sampah kuning, tambah 100 poin
-                scoreManager.AddScore(100);
-                Destroy(other.gameObject);
-                Debug.Log("Trash added to Yellow Can! +100 Points");
+                if (trashType.Contains("Bottle") || trashType.Contains("PizzaBox") || trashType.Contains("SodaCan"))
+                {
+                    message = "Correct! +100";
+                    points = 100;
+                    PlaySound(correctSound); // Mainkan suara benar
+                }
+                else
+                {
+                    message = "Wrong! -50";
+                    points = -50;
+                    PlaySound(wrongSound); // Mainkan suara salah
+                    StartCoroutine(cameraShake.Shake(0.3f, 0.2f)); // Panggil efek shake
+                }
             }
-            else if (gameObject.CompareTag("Red"))
+            else if (gameObject.CompareTag("Blue"))
             {
-                // Jika sampah masuk ke tong sampah merah, kurangi 59 poin
-                scoreManager.AddScore(-50);
-                Destroy(other.gameObject);
-                Debug.Log("Trash added to Red Can! -50 Points");
+                if (trashType.Contains("Apple"))
+                {
+                    message = "Correct! +100";
+                    points = 100;
+                    PlaySound(correctSound); // Mainkan suara benar
+                }
+                else
+                {
+                    message = "Wrong! -50";
+                    points = -50;
+                    PlaySound(wrongSound); // Mainkan suara salah
+                    StartCoroutine(cameraShake.Shake(0.3f, 0.2f)); // Panggil efek shake
+                }
             }
+
+            // Update skor
+            scoreManager.UpdateScore(points);
+
+            // Tampilkan pesan feedback
+            ShowFeedbackText(message, other.transform.position);
+
+            // Hancurkan sampah setelah menunjukkan feedback
+            Destroy(other.gameObject);
         }
+    }
+
+    void PlaySound(AudioClip clip)
+    {
+        if (audioSource != null && clip != null)
+        {
+            audioSource.PlayOneShot(clip); // Mainkan suara sekali
+        }
+    }
+
+    void ShowFeedbackText(string message, Vector3 worldPosition)
+    {
+        if (feedbackTextPrefab == null || canvasTransform == null)
+        {
+            Debug.LogWarning("Feedback Text Prefab or Canvas Transform is missing!");
+            return;
+        }
+
+        // Buat teks feedback di canvas
+        GameObject feedbackText = Instantiate(feedbackTextPrefab, canvasTransform);
+
+        // Atur teks
+        var textComponent = feedbackText.GetComponent<UnityEngine.UI.Text>();
+        if (textComponent != null)
+        {
+            textComponent.text = message;
+        }
+        else
+        {
+            Debug.LogError("Feedback Text Prefab is missing a Text component!");
+            Destroy(feedbackText);
+            return;
+        }
+
+        // Konversi posisi dunia ke posisi layar
+        Vector3 screenPosition = Camera.main.WorldToScreenPoint(worldPosition);
+        feedbackText.transform.position = screenPosition;
+
+        // Hapus teks setelah 1.5 detik
+        Destroy(feedbackText, 1.5f);
     }
 }

@@ -66,7 +66,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 89e5487b4a4ed334f9fea94369e3b93f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b08ce07dad337bc41abf9a8f81abd17c, type: 2}
+      objectReference: {fileID: 2100000, guid: d837bdad2fd1bb74c8a1aec7ef613932, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 89e5487b4a4ed334f9fea94369e3b93f, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5670966607213774925, guid: 8195e6e02b6314e4da6e37aa528f684f, type: 3}
     - target: {fileID: 919132149155446097, guid: 89e5487b4a4ed334f9fea94369e3b93f, type: 3}
       propertyPath: m_Name
       value: Apple
@@ -74,6 +78,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 89e5487b4a4ed334f9fea94369e3b93f, type: 3}
       propertyPath: m_TagString
       value: Trash
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 89e5487b4a4ed334f9fea94369e3b93f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89e5487b4a4ed334f9fea94369e3b93f, type: 3}

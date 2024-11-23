@@ -66,7 +66,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 8554d54535205974d883ba4c4e25d85a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4942ab05610c1184786e5cb445567123, type: 2}
+      objectReference: {fileID: 2100000, guid: f5d106202c34dbe409063d2728e949fe, type: 2}
     - target: {fileID: 919132149155446097, guid: 8554d54535205974d883ba4c4e25d85a, type: 3}
       propertyPath: m_Name
       value: Bottle
