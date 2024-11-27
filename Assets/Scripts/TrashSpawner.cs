@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TrashSpawner : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class TrashSpawner : MonoBehaviour
     public int waveTrashCount = 20;   // Total jumlah sampah dalam wave
     public float waveDuration = 30f;  // Durasi wave dalam detik
     public float gameDuration = 120f; // Durasi total game dalam detik
+    public Text waveText; 
 
     private bool isSpawning = true;   // Status apakah sedang spawn
     private bool inWave = false;      // Status apakah sedang dalam wave
@@ -18,6 +20,7 @@ public class TrashSpawner : MonoBehaviour
 
     void Start()
     {
+        waveText.gameObject.SetActive(false);
         StartCoroutine(SpawnTrash());
     }
 
@@ -58,6 +61,9 @@ public class TrashSpawner : MonoBehaviour
     IEnumerator SpawnWave()
     {
         inWave = true;
+        waveText.gameObject.SetActive(true); // Show wave text
+        yield return new WaitForSeconds(2f); // Display the text for 2 seconds
+        waveText.gameObject.SetActive(false); // Hide wave text
         int spawnedCount = 0;
 
         while (spawnedCount < waveTrashCount)
@@ -80,4 +86,4 @@ public class TrashSpawner : MonoBehaviour
     {
         isSpawning = false;
     }
-}
+} 
