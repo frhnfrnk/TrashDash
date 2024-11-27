@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 112.74, y: -53.9}
+  m_AnchoredPosition: {x: 111.6, y: -53.9}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &106313587
@@ -182,7 +182,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 48805902efb39a6478e5e962150ceb5d, type: 3}
     m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
@@ -527,7 +527,11 @@ MonoBehaviour:
   - {fileID: 512234702385795720, guid: dbd28e64806985a47b6237b3f847e918, type: 3}
   - {fileID: 7648495453812557825, guid: 73e0377cb611e3e4399c295e234541e2, type: 3}
   spawnPoint: {fileID: 1787870227}
-  spawnInterval: 3
+  spawnInterval: 5
+  waveSpawnInterval: 1.5
+  waveTrashCount: 20
+  waveDuration: 30
+  gameDuration: 120
 --- !u!4 &646175348
 Transform:
   m_ObjectHideFlags: 0
@@ -691,7 +695,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -602, y: 382.6}
+  m_AnchoredPosition: {x: -439.2, y: 231.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &964332694
@@ -715,7 +719,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 48805902efb39a6478e5e962150ceb5d, type: 3}
     m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
