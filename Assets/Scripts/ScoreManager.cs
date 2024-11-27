@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
+    
+    public GameOverScreen GameOverScreen;
+
     public Text scoreText;  // UI teks untuk skor
     public Text timerText;  // UI teks untuk timer
     private int score = 0;  // Nilai skor
@@ -47,5 +50,6 @@ public class ScoreManager : MonoBehaviour
         // Logika ketika permainan selesai
         Debug.Log("Final Score: " + score);
         // Tambahkan logika lain, seperti menampilkan layar akhir permainan
+        GameOverScreen.Setup(score);
     }
 }

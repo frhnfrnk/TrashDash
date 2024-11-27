@@ -36,7 +36,7 @@ public class MusicManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // Stop and destroy the music if not in Title or LevelSelection scenes
-        if (scene.name != "Title" && scene.name != "LevelSelection")
+        if (scene.name != "Title" && scene.name != "LevelSelection" && scene.name != "MainMenu")
         {
             Destroy(gameObject);
         }

@@ -17,7 +17,7 @@ public class TitleScreen : MonoBehaviour
     void StartGame()
     {
         // Load scene berikutnya (main gameplay)
-        SceneManager.LoadScene("LevelSelection");
+        SceneManager.LoadScene("MainMenu");
     }
 }
 
