@@ -7,7 +7,7 @@ public class TrashSpawner : MonoBehaviour
     public GameObject[] trashPrefabs; // Array prefab sampah
     public Transform spawnPoint;      // Titik awal spawn
     public float spawnInterval = 2f;  // Interval spawn normal
-    public float waveSpawnInterval = 1.5f; // Interval antar spawn saat wave
+    public float waveSpawnInterval = 0.7f; // Interval antar spawn saat wave
     public int waveTrashCount = 20;   // Total jumlah sampah dalam wave
     public float waveDuration = 30f;  // Durasi wave dalam detik
     public float gameDuration = 120f; // Durasi total game dalam detik
