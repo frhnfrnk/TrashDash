@@ -691,7 +691,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -438.4, y: 224.74}
+  m_AnchoredPosition: {x: -602, y: 382.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &964332694
@@ -1303,11 +1303,11 @@ PrefabInstance:
     - target: {fileID: 2384684175155891922, guid: a9ac0e7c941b9374ab01029f394ba496, type: 3}
       propertyPath: canvasTransform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1892744362}
     - target: {fileID: 2384684175155891922, guid: a9ac0e7c941b9374ab01029f394ba496, type: 3}
       propertyPath: feedbackTextPrefab
       value: 
-      objectReference: {fileID: 1892744358}
+      objectReference: {fileID: 2042305891058424997, guid: ae103700ba915b34686318bd1aa3b1ee, type: 3}
     - target: {fileID: 5925035654672116943, guid: a9ac0e7c941b9374ab01029f394ba496, type: 3}
       propertyPath: m_Name
       value: Trashbin Blue

@@ -98,6 +98,16 @@ public class TrashCan : MonoBehaviour
         if (textComponent != null)
         {
             textComponent.text = message;
+
+            // Ubah warna teks berdasarkan apakah benar atau salah
+            if (message.Contains("Correct"))
+            {
+                textComponent.color = Color.green;  // Warna hijau untuk benar
+            }
+            else
+            {
+                textComponent.color = Color.red;    // Warna merah untuk salah
+            }
         }
         else
         {
