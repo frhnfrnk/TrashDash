@@ -907,7 +907,6 @@ MonoBehaviour:
   - {fileID: 660313938775048934, guid: 8dbf5c7756ff24c4a9777f5cca237225, type: 3}
   - {fileID: 1085617807731526701, guid: df3c24f6c77664344b2b84903132f9bf, type: 3}
   - {fileID: 512234702385795720, guid: dbd28e64806985a47b6237b3f847e918, type: 3}
-  - {fileID: 7648495453812557825, guid: 73e0377cb611e3e4399c295e234541e2, type: 3}
   spawnPoint: {fileID: 1787870227}
   spawnInterval: 5
   waveSpawnInterval: 1
@@ -2272,9 +2271,17 @@ PrefabInstance:
       propertyPath: feedbackTextPrefab
       value: 
       objectReference: {fileID: 2042305891058424997, guid: ae103700ba915b34686318bd1aa3b1ee, type: 3}
+    - target: {fileID: 5333707290796316691, guid: a9ac0e7c941b9374ab01029f394ba496, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b519de37e5024c42a6d0e9986b50201, type: 2}
     - target: {fileID: 5925035654672116943, guid: a9ac0e7c941b9374ab01029f394ba496, type: 3}
       propertyPath: m_Name
-      value: Trashbin Blue
+      value: Trashbin Green
+      objectReference: {fileID: 0}
+    - target: {fileID: 5925035654672116943, guid: a9ac0e7c941b9374ab01029f394ba496, type: 3}
+      propertyPath: m_TagString
+      value: Green
       objectReference: {fileID: 0}
     - target: {fileID: 7233534518300745436, guid: a9ac0e7c941b9374ab01029f394ba496, type: 3}
       propertyPath: m_RootOrder
@@ -2320,6 +2327,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7657894360028273062, guid: a9ac0e7c941b9374ab01029f394ba496, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b519de37e5024c42a6d0e9986b50201, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9ac0e7c941b9374ab01029f394ba496, type: 3}
 --- !u!1001 &4950261858933863970

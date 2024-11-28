@@ -5,14 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class LevelScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    // Level number to determine which scene to open
+    public int level;
 
     // Update is called once per frame
-    public void OpenScene() {
-        SceneManager.LoadScene("Main");
+    public void OpenScene()
+    {
+        // Generate scene name based on level number
+        string sceneName = "Level " + level;
+
+        // Load the scene with the generated name
+        SceneManager.LoadScene(sceneName);
     }
 }

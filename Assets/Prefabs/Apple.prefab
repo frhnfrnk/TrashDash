@@ -146,6 +146,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   fallSpeed: 5
-  boundaryX: 22
+  boundaryX: 25
   groundY: 0.6
   rotationSpeed: 200

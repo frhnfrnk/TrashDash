@@ -32,7 +32,7 @@ public class TrashCan : MonoBehaviour
             // Cek jenis sampah dan tong sampah
             if (gameObject.CompareTag("Yellow"))
             {
-                if (trashType.Contains("Bottle") || trashType.Contains("PizzaBox") || trashType.Contains("SodaCan"))
+                if (trashType.Contains("Bottle") || trashType.Contains("PizzaBox") || trashType.Contains("WaterBottle"))
                 {
                     message = "Correct! +100";
                     points = 100;
@@ -40,15 +40,15 @@ public class TrashCan : MonoBehaviour
                 }
                 else
                 {
-                    message = "Wrong! -50";
-                    points = -50;
+                    message = "Wrong! -100";
+                    points = -100;
                     PlaySound(wrongSound); // Mainkan suara salah
                     StartCoroutine(cameraShake.Shake(0.3f, 0.2f)); // Panggil efek shake
                 }
             }
-            else if (gameObject.CompareTag("Blue"))
+            else if (gameObject.CompareTag("Green"))
             {
-                if (trashType.Contains("Apple"))
+                if (trashType.Contains("Apple") || trashType.Contains("Burger") || trashType.Contains("Pizza"))
                 {
                     message = "Correct! +100";
                     points = 100;
@@ -56,15 +56,31 @@ public class TrashCan : MonoBehaviour
                 }
                 else
                 {
-                    message = "Wrong! -50";
-                    points = -50;
+                    message = "Wrong! -100";
+                    points = -100;
+                    PlaySound(wrongSound); // Mainkan suara salah
+                    StartCoroutine(cameraShake.Shake(0.3f, 0.2f)); // Panggil efek shake
+                }
+            }
+            else if (gameObject.CompareTag("Red"))
+            {
+                if (trashType.Contains("Wine") || trashType.Contains("SodaCan") || trashType.Contains("Mug"))
+                {
+                    message = "Correct! +100";
+                    points = 100;
+                    PlaySound(correctSound); // Mainkan suara benar
+                }
+                else
+                {
+                    message = "Wrong! -100";
+                    points = -100;
                     PlaySound(wrongSound); // Mainkan suara salah
                     StartCoroutine(cameraShake.Shake(0.3f, 0.2f)); // Panggil efek shake
                 }
             }
 
-            // Update skor
-            scoreManager.UpdateScore(points);
+                // Update skor
+                scoreManager.UpdateScore(points);
 
             // Tampilkan pesan feedback
             ShowFeedbackText(message, other.transform.position);
