@@ -12,20 +12,26 @@ public class TrashSpawner : MonoBehaviour
     public int waveTrashCount = 20;   // Total jumlah sampah dalam wave
     public float waveDuration = 30f;  // Durasi wave dalam detik
     public float gameDuration = 120f; // Durasi total game dalam detik
-    public Text waveText; 
+    public Text waveText;
+    public GameObject pauseScreen;    // Reference to Pause Screen UI
 
     private bool isSpawning = true;   // Status apakah sedang spawn
     private bool inWave = false;      // Status apakah sedang dalam wave
     private float gameTimer = 0f;     // Timer untuk melacak waktu game
+    private bool isPaused = false;    // Status apakah game dalam kondisi pause
 
     void Start()
     {
         waveText.gameObject.SetActive(false);
+        pauseScreen.SetActive(false); // Ensure the pause screen is hidden
         StartCoroutine(SpawnTrash());
     }
 
     void Update()
     {
+        if (isPaused)
+            return;
+
         // Perbarui timer game
         gameTimer += Time.deltaTime;
 
@@ -86,4 +92,18 @@ public class TrashSpawner : MonoBehaviour
     {
         isSpawning = false;
     }
-} 
+
+    public void TogglePauseGame()
+    {
+        isPaused = !isPaused;
+        Time.timeScale = isPaused ? 0 : 1; // Pause or resume game
+        pauseScreen.SetActive(isPaused); // Show or hide the pause screen
+    }
+    
+    public void ContinueGame()
+    {
+        isPaused = false;
+        Time.timeScale = 1;             // Resume the game
+        pauseScreen.SetActive(false);   // Hide the pause screen
+    }
+}
