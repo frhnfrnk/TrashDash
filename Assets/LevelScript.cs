@@ -12,7 +12,7 @@ public class LevelScript : MonoBehaviour
     public void OpenScene()
     {
         // Generate scene name based on level number
-        string sceneName = "Level " + level;
+        string sceneName = "Dialog " + level;
 
         // Load the scene with the generated name
         SceneManager.LoadScene(sceneName);

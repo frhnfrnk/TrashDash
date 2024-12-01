@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0def59b009164db47bd2640075f79ec6, type: 3}
+  m_Name: Level 2
+  m_EditorClassIdentifier: 
+  dialogStates:
+  - ActiveSpeaker: Left
+    LeftCharacterName: Rina
+    RightCharacterName: Budi
+    DialogText: Ini tidak bisa dibiarkan! Sampah di sini bercampur semuanya... bagaimana
+      lingkungan kita bisa terjaga kalau begini terus?
+    LeftSprite: {fileID: 21300000, guid: 8d9cf405145cd79438597164e4a31a48, type: 3}
+    RightSprite: {fileID: 21300000, guid: 826243ac8adf0654d942f94d6dc57afc, type: 3}
+  - ActiveSpeaker: Right
+    LeftCharacterName: Rina
+    RightCharacterName: Budi
+    DialogText: Hah, kenapa kamu repot-repot, Rina? Sampah ya sampah, toh akan dibuang
+      juga.
+    LeftSprite: {fileID: 21300000, guid: 8d9cf405145cd79438597164e4a31a48, type: 3}
+    RightSprite: {fileID: 21300000, guid: 826243ac8adf0654d942f94d6dc57afc, type: 3}
+  - ActiveSpeaker: Left
+    LeftCharacterName: Rina
+    RightCharacterName: Budi
+    DialogText: Kamu salah, Budi! Sampah itu ada jenis-jenisnya, dan kalau kita tidak
+      memisahkannya dengan benar, bisa jadi bencana untuk lingkungan!
+    LeftSprite: {fileID: 21300000, guid: 8d9cf405145cd79438597164e4a31a48, type: 3}
+    RightSprite: {fileID: 21300000, guid: 826243ac8adf0654d942f94d6dc57afc, type: 3}
+  - ActiveSpeaker: Right
+    LeftCharacterName: Rina
+    RightCharacterName: Budi
+    DialogText: Memisahkan? Maksudmu kayak... sampah makanan dipisah dari plastik
+      gitu?
+    LeftSprite: {fileID: 21300000, guid: 8d9cf405145cd79438597164e4a31a48, type: 3}
+    RightSprite: {fileID: 21300000, guid: 826243ac8adf0654d942f94d6dc57afc, type: 3}
+  - ActiveSpeaker: Left
+    LeftCharacterName: Rina
+    RightCharacterName: Budi
+    DialogText: Betul! Sampah organik, seperti sisa makanan, bisa terurai dan dijadikan
+      kompos. Tapi sampah anorganik, seperti plastik, tidak bisa terurai dengan cepat.
+      Kita harus memisahkannya agar mudah diolah.
+    LeftSprite: {fileID: 21300000, guid: 8d9cf405145cd79438597164e4a31a48, type: 3}
+    RightSprite: {fileID: 21300000, guid: 826243ac8adf0654d942f94d6dc57afc, type: 3}
+  - ActiveSpeaker: Right
+    LeftCharacterName: Rina
+    RightCharacterName: Budi
+    DialogText: Hmm... kayaknya ribet, deh. Tapi kalau kamu serius, aku mau coba
+      belajar.
+    LeftSprite: {fileID: 21300000, guid: 8d9cf405145cd79438597164e4a31a48, type: 3}
+    RightSprite: {fileID: 21300000, guid: 826243ac8adf0654d942f94d6dc57afc, type: 3}
+  - ActiveSpeaker: Left
+    LeftCharacterName: Rina
+    RightCharacterName: Budi
+    DialogText: 'Ayo kita mulai dari sini! Aku akan tunjukkan caranya. Kita bisa
+      gunakan tempat sampah yang sudah disediakan: organik di sebelah kanan, anorganik
+      di sebelah kiri.'
+    LeftSprite: {fileID: 21300000, guid: 8d9cf405145cd79438597164e4a31a48, type: 3}
+    RightSprite: {fileID: 21300000, guid: 826243ac8adf0654d942f94d6dc57afc, type: 3}

@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0def59b009164db47bd2640075f79ec6, type: 3}
+  m_Name: Level 3
+  m_EditorClassIdentifier: 
+  dialogStates:
+  - ActiveSpeaker: Right
+    LeftCharacterName: Rina
+    RightCharacterName: Ibu Siti
+    DialogText: Rina, kamu sudah mulai memahami pentingnya pemisahan sampah. Tapi
+      tahukah kamu bahwa di sekolah kita ada lebih banyak jenis sampah yang perlu
+      dipisahkan?
+    LeftSprite: {fileID: 21300000, guid: 8d9cf405145cd79438597164e4a31a48, type: 3}
+    RightSprite: {fileID: 21300000, guid: dd06191c23549424284f0adf67a37fac, type: 3}
+  - ActiveSpeaker: Left
+    LeftCharacterName: Rina
+    RightCharacterName: Ibu Siti
+    DialogText: Lebih banyak jenis, Bu? Maksudnya apa, ya?
+    LeftSprite: {fileID: 21300000, guid: 8d9cf405145cd79438597164e4a31a48, type: 3}
+    RightSprite: {fileID: 21300000, guid: dd06191c23549424284f0adf67a37fac, type: 3}
+  - ActiveSpeaker: Right
+    LeftCharacterName: Rina
+    RightCharacterName: Ibu Siti
+    DialogText: Wah, jadi di sini ada tiga kategori? Organik, serta anorganik yang
+      dipisah menjadi kertas, dan plastik?
+    LeftSprite: {fileID: 21300000, guid: 8d9cf405145cd79438597164e4a31a48, type: 3}
+    RightSprite: {fileID: 21300000, guid: dd06191c23549424284f0adf67a37fac, type: 3}
+  - ActiveSpeaker: Left
+    LeftCharacterName: Rina
+    RightCharacterName: Ibu Siti
+    DialogText: Tepat sekali. Dan kali ini, kamu akan belajar memisahkan semuanya
+      dengan cepat, karena di dunia nyata, waktu adalah hal yang penting.
+    LeftSprite: {fileID: 21300000, guid: 8d9cf405145cd79438597164e4a31a48, type: 3}
+    RightSprite: {fileID: 21300000, guid: dd06191c23549424284f0adf67a37fac, type: 3}
+  - ActiveSpeaker: Right
+    LeftCharacterName: Rina
+    RightCharacterName: Ibu Siti
+    DialogText: Baik, Bu. Saya akan melakukan yang terbaik!
+    LeftSprite: {fileID: 21300000, guid: 8d9cf405145cd79438597164e4a31a48, type: 3}
+    RightSprite: {fileID: 21300000, guid: dd06191c23549424284f0adf67a37fac, type: 3}
+  - ActiveSpeaker: Left
+    LeftCharacterName: Budi
+    RightCharacterName: Ibu Siti
+    DialogText: Saya juga akan ikut membantu, Bu!
+    LeftSprite: {fileID: 21300000, guid: 826243ac8adf0654d942f94d6dc57afc, type: 3}
+    RightSprite: {fileID: 21300000, guid: dd06191c23549424284f0adf67a37fac, type: 3}
+  - ActiveSpeaker: Right
+    LeftCharacterName: Rina
+    RightCharacterName: Ibu Siti
+    DialogText: Bagus. Tapi ingat, setiap keputusan yang kamu ambil memiliki dampak
+      besar. Ketika kamu memilah dengan benar, kamu ikut menjaga lingkungan di sekolah
+      ini.
+    LeftSprite: {fileID: 21300000, guid: 8d9cf405145cd79438597164e4a31a48, type: 3}
+    RightSprite: {fileID: 21300000, guid: dd06191c23549424284f0adf67a37fac, type: 3}
