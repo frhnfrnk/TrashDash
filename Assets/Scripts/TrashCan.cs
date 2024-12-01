@@ -32,7 +32,7 @@ public class TrashCan : MonoBehaviour
             // Cek jenis sampah dan tong sampah
             if (gameObject.CompareTag("Yellow"))
             {
-                if (trashType.Contains("Bottle") || trashType.Contains("PizzaBox") || trashType.Contains("WaterBottle"))
+                if (trashType.Contains("Bottle") || trashType.Contains("Box") || trashType.Contains("WaterBottle"))
                 {
                     message = "Correct! +100";
                     points = 100;

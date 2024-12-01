@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: bbee897836b0dcb4eb5ce0364f75d8c2
+guid: e6ce8b2311f883742a22254f73d721d9
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - scoreManager: {instanceID: 0}
-  - fallSound: {fileID: 8300000, guid: 39cde8ba6859dc342a2899c417a65e62, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
