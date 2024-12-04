@@ -1,5 +1,5 @@
 <h1 align="center" >
-    Trash Dash
+    TrashDash
 </h1>
 
 ![image](https://github.com/user-attachments/assets/3c4329bc-7be7-42eb-85dc-7f7f1fa9d669)
@@ -13,8 +13,8 @@ TrashDash is a game where players have to sort trash moving along a conveyor int
 - **Farhan Franaka** - 21/482306/TK/53250
 
 ## All Links
-- **Game Design Document :** [Notion](https://farhan-franaka.notion.site/Game-Design-TrashDash-1294b72fccbe807a9a11c55393bc1f0e)****
-- **Video Presentasi:**
+- **Game Design Document :** [Notion](https://farhan-franaka.notion.site/Game-Design-TrashDash-1294b72fccbe807a9a11c55393bc1f0e)
+- **Video Presentasi:** [YouTube](https://youtu.be/HRGZh3M-eAE)
 
 ## Tech Stack
 - **Game Engine:** Unitu
@@ -24,7 +24,7 @@ TrashDash is a game where players have to sort trash moving along a conveyor int
 ## How to Run?
 1. Clone this repository
     ```````````
-    git clone https://github.com/group4paw/auction-fe.git
+    git clone https://github.com/frhnfrnk/TrashDash
     ```````````
 2. Go to Executable Folder
     ```````````
