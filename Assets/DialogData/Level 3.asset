@@ -30,18 +30,25 @@ MonoBehaviour:
   - ActiveSpeaker: Right
     LeftCharacterName: Rina
     RightCharacterName: Ibu Siti
+    DialogText: Jadi, sekarng kamu akan belajar bahwa sampah dapat dikelompokkan
+      dalam tiga kategori
+    LeftSprite: {fileID: 21300000, guid: 8d9cf405145cd79438597164e4a31a48, type: 3}
+    RightSprite: {fileID: 21300000, guid: dd06191c23549424284f0adf67a37fac, type: 3}
+  - ActiveSpeaker: Left
+    LeftCharacterName: Rina
+    RightCharacterName: Ibu Siti
     DialogText: Wah, jadi di sini ada tiga kategori? Organik, serta anorganik yang
       dipisah menjadi kertas, dan plastik?
     LeftSprite: {fileID: 21300000, guid: 8d9cf405145cd79438597164e4a31a48, type: 3}
     RightSprite: {fileID: 21300000, guid: dd06191c23549424284f0adf67a37fac, type: 3}
-  - ActiveSpeaker: Left
+  - ActiveSpeaker: Right
     LeftCharacterName: Rina
     RightCharacterName: Ibu Siti
     DialogText: Tepat sekali. Dan kali ini, kamu akan belajar memisahkan semuanya
       dengan cepat, karena di dunia nyata, waktu adalah hal yang penting.
     LeftSprite: {fileID: 21300000, guid: 8d9cf405145cd79438597164e4a31a48, type: 3}
     RightSprite: {fileID: 21300000, guid: dd06191c23549424284f0adf67a37fac, type: 3}
-  - ActiveSpeaker: Right
+  - ActiveSpeaker: Left
     LeftCharacterName: Rina
     RightCharacterName: Ibu Siti
     DialogText: Baik, Bu. Saya akan melakukan yang terbaik!
