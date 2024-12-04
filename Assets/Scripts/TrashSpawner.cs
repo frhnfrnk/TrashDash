@@ -22,6 +22,8 @@ public class TrashSpawner : MonoBehaviour
 
     void Start()
     {
+        isPaused = false;
+        Time.timeScale = 1;
         waveText.gameObject.SetActive(false);
         pauseScreen.SetActive(false); // Ensure the pause screen is hidden
         StartCoroutine(SpawnTrash());
