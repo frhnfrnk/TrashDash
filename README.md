@@ -1,8 +1,8 @@
-<h1 align="center" >
+![image](https://github.com/user-attachments/assets/83faf392-3462-42b8-9729-de2b0d20ad37)<h1 align="center" >
     Trash Dash
 </h1>
 
-![image](https://github.com/user-attachments/assets/44027ba8-db07-4b3b-8399-4c1081c7db53)
+![image](https://github.com/user-attachments/assets/3c4329bc-7be7-42eb-85dc-7f7f1fa9d669)
 
 ## About this project
 TrashDash is a game where players have to sort trash moving along a conveyor into the appropriate place before it falls into the water, the faster and more accurate the sorting, the more points they get.
