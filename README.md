@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/83faf392-3462-42b8-9729-de2b0d20ad37)<h1 align="center" >
+<h1 align="center" >
     Trash Dash
 </h1>
 
